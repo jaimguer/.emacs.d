@@ -46,12 +46,8 @@
   (setq helm-M-x-fuzzy-match t)
   (setq helm-buffers-fuzzy-matching t)
   (setq helm-recentf-fuzzy-match t)
-  (setq helm-move-to-line-cycle-in-source t)
-  :init
-  (dolist (keymap (list helm-find-files-map helm-read-file-map))
-    (define-key keymap (kbd "C-l") 'helm-execute-persistent-action)
-    (define-key keymap (kbd "C-h") 'helm-find-files-up-one-level)
-    (define-key keymap (kbd "C-S-h") 'describe-key)))
+  (setq helm-move-to-line-cycle-in-source t))
+
 
 (use-package org
   :ensure t
@@ -78,6 +74,7 @@
 
 (use-package evil
   :ensure t
+  :demand t
   :config
   (evil-mode 1)
   (use-package evil-leader
