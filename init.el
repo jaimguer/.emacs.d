@@ -100,6 +100,7 @@
 
 (use-package nlinum-relative
   :ensure t
+  :demand t
   :config
   (nlinum-relative-on)
   (nlinum-relative-setup-evil)
@@ -107,7 +108,9 @@
 
 (use-package magit
   :ensure t
-  :demand t)
+  :demand t
+  :bind
+  (("C-x g" . magit)))
 
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
