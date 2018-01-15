@@ -103,6 +103,7 @@
   :demand t
   :config
   (nlinum-relative-on)
+  (global-nlinum-mode t)
   (nlinum-relative-setup-evil)
   (setq nlinum-relative-redisplay-delay 0))
 
